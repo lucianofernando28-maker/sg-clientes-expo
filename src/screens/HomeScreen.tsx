@@ -1,3 +1,9 @@
+//Tela inicial do app SGCL (Dashboard).
+// Apresenta o cabeçalho em gradiente com o título "SGCL" e subtítulo
+// "Gestão de clientes", o botão de menu hambúrguer que abre o menu flutuante
+// ("Lista de clientes" e "Adicionar cliente") e o cartão central com o total
+// de clientes registados.
+
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -71,6 +77,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
   );
 }
 
+// Folha de estilos da tela inicial (HomeScreen)
 const styles = StyleSheet.create({
   screen: {
     flex: 1,

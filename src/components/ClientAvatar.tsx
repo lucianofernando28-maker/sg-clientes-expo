@@ -7,7 +7,7 @@ interface ClientAvatarProps {
   // 'list' aplica o avatar compacto; 'detail' aplica o círculo grande com borda verde-água
   variant?: 'list' | 'detail';
 }
-
+// Componente funcional ClientAvatar
 export default function ClientAvatar({ initials, variant = 'list' }: ClientAvatarProps) {
   const isDetail = variant === 'detail';
 
@@ -20,7 +20,9 @@ export default function ClientAvatar({ initials, variant = 'list' }: ClientAvata
   );
 }
 
+// Folha de estilos dedicada ao componente ClientAvatar
 const styles = StyleSheet.create({
+  // Propriedades geométricas comuns a ambas as variantes circulares
   baseCircle: {
     alignItems: 'center',
     justifyContent: 'center',

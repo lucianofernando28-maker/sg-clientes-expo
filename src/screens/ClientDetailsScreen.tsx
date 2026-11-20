@@ -1,3 +1,9 @@
+//Tela de visualização completa dos dados do cliente ("Detalhes do cliente").
+// Exibe o cabeçalho em gradiente, o avatar circular grande sobreposto à borda
+// inferior do cabeçalho, o nome centralizado, o cartão branco com os campos
+// separados por linhas divisórias (Telefone, Endereço, Último serviço, Data do
+// último serviço) e os dois botões inferiores ("Editar" e "Eliminar").
+
 import React, { useState } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -93,6 +99,7 @@ export default function ClientDetailsScreen({ navigation, route }: ClientDetails
   );
 }
 
+// Folha de estilos da tela ClientDetailsScreen
 const styles = StyleSheet.create({
   screen: {
     flex: 1,

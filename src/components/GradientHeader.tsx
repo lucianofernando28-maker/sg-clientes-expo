@@ -5,6 +5,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { COLORS } from '../theme/colors';
 
+// Componente reutilizável de cabeçalho com fundo em gradiente
+// (azul escuro para verde-água) e cantos inferiores arredondados, presente em todas as telas da app
 interface GradientHeaderProps {
   title: string;
   subtitle?: string;
@@ -30,6 +32,7 @@ export default function GradientHeader({
   const insets = useSafeAreaInsets();
 
   return (
+    // Renderiza o contentor com gradiente diagonal semelhante à imagem do protótipo
     <LinearGradient
       colors={[COLORS.gradientStart, COLORS.gradientMiddle, COLORS.gradientEnd]}
       start={{ x: 0.1, y: 0 }}

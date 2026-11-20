@@ -1,3 +1,9 @@
+//Tela de listagem de todos os clientes ("Clientes").
+// Contém o cabeçalho em gradiente com seta de voltar e campo de pesquisa
+// arredondado ("Procurar cliente"), a lista de cartões de clientes (Ana Matos,
+// Carlos Neto, Marta Lopes), o botão flutuante circular (+) no canto inferior
+// direito e o modal de confirmação ao tocar no ícone de lixeira.
+
 import React, { useState } from 'react';
 import { View, TextInput, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -20,14 +26,17 @@ export default function ClientsListScreen({ navigation }: ClientsListScreenProps
   );
 
   return (
+        // Contentor principal da tela de clientes
     <View style={styles.screen}>
       <GradientHeader
         title="Clientes"
         showBack={true}
         onBackPress={() => navigation.goBack()}
       >
+        {/* Barra de pesquisa branca em formato pílula dentro do cabeçalho */}
         <View style={styles.searchBar}>
           <Ionicons name="search-outline" size={22} color={COLORS.textSecondary} />
+          {/* Campo de texto para procurar cliente */}
           <TextInput
             style={styles.searchInput}
             placeholder="Procurar cliente"
@@ -38,6 +47,7 @@ export default function ClientsListScreen({ navigation }: ClientsListScreenProps
         </View>
       </GradientHeader>
 
+      {/* Lista rolável dos cartões de clientes */}
       <FlatList
         data={filteredClients}
         keyExtractor={(item) => item.id}
@@ -72,6 +82,7 @@ export default function ClientsListScreen({ navigation }: ClientsListScreenProps
   );
 }
 
+// Folha de estilos da tela de Listagem de Clientes
 const styles = StyleSheet.create({
   screen: {
     flex: 1,

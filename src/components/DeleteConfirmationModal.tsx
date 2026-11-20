@@ -10,6 +10,10 @@ interface DeleteConfirmationModalProps {
   onConfirm: () => void;
 }
 
+// Modal de confirmação reutilizável exibido quando o utilizador toca
+// no botão "Eliminar" (seja na lista de clientes ou na tela de detalhes).
+// Replica fielmente o diálogo centralizado com botões "Cancelar" e "Eliminar".
+//
 export default function DeleteConfirmationModal({
   visible,
   clientName = 'Ana Matos',

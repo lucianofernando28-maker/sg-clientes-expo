@@ -12,6 +12,7 @@ interface ClientCardProps {
   onPressDelete: () => void;
 }
 
+// Componente funcional ClientCard
 export default function ClientCard({
   client,
   onPressCard,
@@ -19,6 +20,7 @@ export default function ClientCard({
   onPressDelete,
 }: ClientCardProps) {
   return (
+    // Cartão principal clicável que navega para os detalhes do cliente
     <TouchableOpacity style={styles.card} onPress={onPressCard} activeOpacity={0.85}>
       <ClientAvatar initials={client.initials} variant="list" />
 

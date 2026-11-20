@@ -1,3 +1,10 @@
+// Componente reutilizável de botão em formato pílula (borderRadius
+// elevado) que suporta quatro variantes visuais presentes no protótipo:
+// - 'primary': fundo verde-água sólido e texto branco ("Guardar cliente", "Editar").
+// - 'danger': fundo vermelho sólido e texto branco ("Eliminar" no modal).
+// - 'outlineDanger': fundo branco, borda e texto vermelhos ("Eliminar" nos detalhes).
+// - 'outlineNeutral': fundo branco, borda cinza e texto escuro ("Cancelar" no modal).
+
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import { COLORS } from '../theme/colors';

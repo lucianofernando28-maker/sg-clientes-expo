@@ -8,7 +8,8 @@ import { RootStackParamList } from '../types/client';
 import { COLORS } from '../theme/colors';
 
 type ClientFormScreenProps = NativeStackScreenProps<RootStackParamList, 'ClientForm'>;
-
+//Tela reutilizável de formulário para Criar ("Adicionar cliente")
+// ou Atualizar ("Editar cliente") um registo.
 export default function ClientFormScreen({ navigation, route }: ClientFormScreenProps) {
   // Partilha o mesmo ecrã entre Criação e Edição conforme o parâmetro recebido na rota
   const mode = route.params?.mode || 'create';
@@ -86,6 +87,7 @@ export default function ClientFormScreen({ navigation, route }: ClientFormScreen
   );
 }
 
+// Folha de estilos da tela ClientFormScreen
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
